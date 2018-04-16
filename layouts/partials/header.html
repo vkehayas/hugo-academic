@@ -49,7 +49,7 @@
   
   {{ if $scr.Get "highlight_enabled" }}
     
-    {{ if $scr.highlight_engine == "highlight.js"}}
+    {{ if eq ($scr.Get "highlight_engine") "highlight.js"}}
   
       {{ $v := $sri.js.highlight.version }}
         {{ with .Site.Params.highlight_style }}
@@ -62,19 +62,19 @@
         {{ end }}
       {{ end }}
       
-    {{ else if $scr.highlight_engine == "prism"}}
+    {{ else if eq ($scr.Get "highlight_engine") "prism"}}
     
-      {{ with .Site.Params.highlight_style }}
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism-{{ . }}.min.css">
+      {{ if eq ($scr.Get "light") true }}
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css">
       {{ else }}
-        {{ if eq ($scr.Get "light") true }}
-          <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css">
-        {{ else }}
-          <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism-dark.min.css">
-        {{ end }}
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism-dark.min.css">
       {{ end }}
     
     {{ end }}
+    
+      
+  {{ end }}
+
   
   {{ if not .Site.Params.disable_sri }}
   {{ printf "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/%s/css/bootstrap.min.css\" integrity=\"%s\" crossorigin=\"anonymous\">" $sri.css.bootstrap.version $sri.css.bootstrap.sri | safeHTML }}
