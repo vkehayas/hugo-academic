@@ -76,7 +76,7 @@ ul, ol, dl {
 
 /* Navigation bar text */
 .navbar-default {
-  font-family: '{{ .Get "nav_font" }}', sans-serif;
+  font-family: '{{ .Get "nav_font" }}', serif;
   font-weight: 400;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
@@ -84,7 +84,7 @@ ul, ol, dl {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: '{{ .Get "heading_font" }}', sans-serif;
+  font-family: '{{ .Get "heading_font" }}', serif;
   font-weight: 400;
   margin-bottom: .5rem;
   line-height: 1.25;
@@ -144,6 +144,7 @@ figcaption:before {
   font-weight: 700;
   text-transform: uppercase;
   content: "Figure " counter(captions) ": ";
+  font-family: '{{ .Get "heading_font" }}', serif;
 }
 
 figcaption {
