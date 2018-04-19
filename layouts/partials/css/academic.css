@@ -76,7 +76,7 @@ ul, ol, dl {
 
 /* Navigation bar text */
 .navbar-default {
-  font-family: '{{ .Get "nav_font" }}', serif;
+  font-family: '{{ .Get "nav_font" }}', sans-serif;
   font-weight: 400;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
@@ -84,7 +84,7 @@ ul, ol, dl {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: '{{ .Get "heading_font" }}', serif;
+  font-family: '{{ .Get "heading_font" }}', sans-serif;
   font-weight: 400;
   margin-bottom: .5rem;
   line-height: 1.25;
@@ -144,7 +144,6 @@ figcaption:before {
   font-weight: 700;
   text-transform: uppercase;
   content: "Figure " counter(captions) ": ";
-  font-family: '{{ .Get "heading_font" }}', serif;
 }
 
 figcaption {
@@ -1248,6 +1247,7 @@ footer a#back_to_top i {
 
 .navbar-default .navbar-toggle {
   border-color: transparent;
+    margin-top: 13.5px;
 }
 
 .navbar-default .navbar-toggle:focus,
@@ -1296,7 +1296,8 @@ nav#navbar-main li {
 }
 
 .navbar-brand img {
-  max-height: 50px;
+  max-height: 32px;
+  margin-top: 9px;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -1368,7 +1369,7 @@ nav#navbar-main li {
   }
 
   .navbar-brand img {
-    max-height: 40px;
+    max-height: 32px;
   }
 
   .navbar-header {
