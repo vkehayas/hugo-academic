@@ -1369,7 +1369,8 @@ nav#navbar-main li {
   }
 
   .navbar-brand img {
-    max-height: 32px;
+    max-height: 24px;
+    margin-top: 13px;
   }
 
   .navbar-header {
