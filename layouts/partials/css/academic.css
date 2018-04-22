@@ -708,6 +708,10 @@ article .article-metadata {
   padding-top: 1rem;
 }
 
+.article-tags {
+  text-align: left;
+}
+
 /*************************************************
  *  Staticman comment section and form
  **************************************************/
