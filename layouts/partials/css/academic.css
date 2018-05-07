@@ -21,7 +21,7 @@
 }
 
 html {
-  font-family: '{{ .Get "body_font" }}', sans-serif;
+  font-family: '{{ .Get "body_font" }}', Helvetica, sans-serif;
   font-size: {{ .Get "font_size_small" }}px;
   color: rgba(0,0,0,0.8);
   line-height: 1.65;
@@ -76,7 +76,7 @@ ul, ol, dl {
 
 /* Navigation bar text */
 .navbar-default {
-  font-family: '{{ .Get "nav_font" }}', serif;
+  font-family: '{{ .Get "nav_font" }}',Georgia,Utopia,Charter,serif;
   font-weight: 400;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
@@ -84,7 +84,7 @@ ul, ol, dl {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: '{{ .Get "heading_font" }}', serif;
+  font-family: '{{ .Get "heading_font" }}',Georgia,Utopia,Charter,serif;
   font-weight: 400;
   margin-bottom: .5rem;
   line-height: 1.25;
@@ -156,7 +156,7 @@ figcaption {
   line-height: 1.25;
   font-size: 1rem;
   margin-bottom: 1.65rem;
-  font-family: '{{ .Get "heading_font" }}', serif;
+  font-family: '{{ .Get "heading_font" }}',Georgia,Utopia,Charter,serif;
   counter-increment: captions;
 }
 
