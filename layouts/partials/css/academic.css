@@ -186,6 +186,14 @@ hr {
   background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
+
+summary {
+  background-color: #fafafa;
+  box-shadow: inset 0px 0px 5px 0px #bfbfbf, 0px 0px 0px #bfbfbf, 0px 0px 0px #bfbfbf, 0px 0px 0px #bfbfbf;
+  border-radius: 10px;
+  text-indent: 10px;
+}
+
 /* Quotes */
 blockquote {
   padding: .5rem 1rem;
