@@ -10,11 +10,10 @@
       {{ $.Lastmod.Format $.Site.Params.date_format }}
     </time>
   </span>
-  {{ if ne $is_list 0 }}
+  <span class="middot-divider"></span>
   <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="{{ $.Site.Params.name }}">
+    <span itemprop="name">{{ $.Site.Params.name }}</span>
   </span>
-  {{ end }}
 
   {{ if ne $.Site.Params.reading_time false }}
   <span class="middot-divider"></span>
