@@ -11,7 +11,7 @@
   {{ range $index, $comments := (index $.Site.Data.comments $entryId ) }}
   <div class="post-comment">
     <div class="post-comment-header">
-      <img class="post-comment-avatar" src="https://www.gravatar.com/avatar/{{ .email }}?s=100">
+      <img class="post-comment-avatar" src="https://www.gravatar.com/avatar/{{ .email }}?d=identicon">
       <p class="post-comment-info"><strong>{{ .name }}</strong><br>{{ dateFormat "02/01/2006" .date }}</p>
     </div>
     {{ .body | markdownify }}
@@ -43,7 +43,7 @@
   <input name="fields[email]"
   type="email"
   class="post-comment-field"
-  placeholder="Email (not displayed publicly)">
+  placeholder="Email (not displayed publicly, can be blank)">
   <textarea name="fields[body]"
   class="post-comment-field"
   placeholder="Comment (accepts Markdown)"
