@@ -102,11 +102,7 @@
     <script>
       window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
       ga('create', '{{ .Site.GoogleAnalytics }}', 'auto');
-<<<<<<< HEAD
-      ga('set', 'anonymizeIp', true);
-=======
       {{ if .Site.Params.privacy_pack }}ga('set', 'anonymizeIp', true);{{ end }}
->>>>>>> e93e1c2fe384a8338f84a1713ac696621c827101
       ga('require', 'eventTracker');
       ga('require', 'outboundLinkTracker');
       ga('require', 'urlChangeTracker');
