@@ -2,17 +2,24 @@
 {{ $ := .content }}
 <div class="article-metadata">
 
+  {{ if $.Params.authors }}
+  {{ $authorLen := len $.Params.authors }}
+  <div itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    {{ range $k, $v := $.Params.authors }}
+      {{- $v -}}
+      {{- if lt $k (sub $authorLen 1) -}}, {{ end }}
+    {{ end }}
+  </div>
+  {{ end }}
+
   <span class="article-date">
     {{ if ne $.Params.Lastmod $.Params.Date }}
         {{ i18n "last_updated" }}
     {{ end }}
-    <time datetime="{{ $.Date }}" itemprop="datePublished dateModified">
+    <meta content="{{ $.Params.Date }}" itemprop="datePublished">
+    <time datetime="{{ $.Params.LastMod }}" itemprop="dateModified">
       {{ $.Lastmod.Format $.Site.Params.date_format }}
     </time>
-  </span>
-  <span class="middot-divider"></span>
-  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <span itemprop="name">{{ $.Site.Params.name }}</span>
   </span>
 
   {{ if ne $.Site.Params.reading_time false }}
