@@ -18,6 +18,12 @@
 
   {{ partial "tags.html" . }}
 
+  <div class="hr-light"></div>
+  <div class="share-buttons-post">
+    {{ partial "share.html" . }}
+  </div>
+  <br />
+
   {{ $related := .Site.RegularPages.Related . | first 5 }}
   {{ with $related }}
   <div class="article-widget">
