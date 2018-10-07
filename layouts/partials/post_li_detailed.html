@@ -1,7 +1,7 @@
 {{ $post := .post }}
 
 <div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  {{ partial "article_metadata" (dict "content" $post "is_list" 1) }}
+  {{ partial "article_metadata" (dict "content" $post "is_list" 0) }}
 
   {{ $preview := $post.Params.header.preview | default true }}
   {{ if and $post.Params.header.image $preview }}
